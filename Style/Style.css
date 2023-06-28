@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root{
+    --Epilogue: 'Epilogue', sans-serif;
+    --size: 18px;
+    --AlmostWhite: hsl(0, 0%, 98%);
+    --MediumGray: hsl(0, 0%, 41%);
+    --AlmostBlack: hsl(0, 0%, 8%);
+}
+
+body{
+    font-family: var(--Epilogue);
+    background: var(--AlmostWhite);
+    height: 100vh;
+}
+
+.sidebar{
+    display: none;
+}
+
+.nav{
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px;
+    font-size: 14px;
+    color: var(--MediumGray);
+    /* width: 100%; */
+}
+
+.navbar{
+    display: flex;
+    align-items: start;
+    padding-top: 10px;
+}
+
+.burguer{
+    display: none;
+}
+
+.navbar__elements{
+    display: flex;
+    align-items: flex-start;
+    padding-left: 63px;
+    margin: 0;
+    gap: 2.4rem;
+    list-style: none;
+    font-weight: 800;
+}
+
+.features__caret a, .company__caret a, .login__content a{
+    text-decoration: none;
+    color: var(--MediumGray);
+}
+
+.features__caret, .company__caret{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.features__item:hover, .company__item:hover{
+    color: black;
+}
+
+.features__content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 70px;
+    left: 120px;
+    background: white;
+    list-style: none;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 100;
+    display: none;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login__content{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2.6rem;
+}
+
+.login__content button{
+    width: 103px;
+    height: 41px;
+    border-radius: 10px;
+}
+
+.center a{
+    text-decoration: none;
+    color: var(--MediumGray);
+}
+
+.company__content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 70px;
+    left: 19rem;
+    background: white;
+    list-style: none;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 100;
+    display: none;
+}
+
+.careers:hover, .about:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.login__content button{
+    background-color: var(--AlmostWhite);
+    border-color: gray;
+}
+
+.login__content button:hover{
+    cursor: pointer;
+    border-color: black;
+}
+
+.login__content li a{
+    font-weight: 800;
+}
+
+.login__content li a:hover{
+    color: black;
+}
+/*********************************************************/
+.container{
+    display: flex;
+    max-width: 1150px;
+    margin: auto;
+    /* padding: 0 165px; */
+    justify-content: space-between;
+}
+
+.remote{
+    margin-left: 20px;
+}
+
+.hero{
+    margin-top: 46px;
+    margin-left: 7.5rem;
+}
+
+.hero__img{
+    width: 479px;
+}
+
+.sin_span{
+    display: none;
+}
+
+.remote__work h1{
+    font-size: 78px;
+    margin-top: 9rem;
+    margin-bottom: 0;
+    line-height: 1.1;
+}
+
+.remote__work h1 span{
+    display: block;
+}
+
+.remote__work p{
+    font-size: 18px;
+    margin-top: 43px;
+    line-height: 1.5;
+    max-width: 450px;
+    color: var(--MediumGray);
+}
+
+.remote__work .button a{
+    background-color: var(--AlmostBlack);
+    color: var(--AlmostWhite);
+    text-decoration: none;
+    font-size: 17px;
+    padding: 20px 32px;
+    border-radius: 12px;
+}
+
+.button{
+    margin-top: 72px;
+}
+
+.remote__company{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 127px;
+}
+/*********************************************************/
+
+.arrow-down, .arrow-dowm-company, .sidebar_arrow-dowm, .sidebar_arrow-dowm-company{
+    display: block;
+}
+
+.arrow-up, .arrow-up-company, .sidebar_arrow-up, .sidebar_arrow-up-company{
+    display: none;
+}
+
+.activate{
+    display: flex !important;
+}  
+
+.activateSidebar{
+    display: block !important;
+}
+
+.desactive{
+    display: none !important;
+}
+
+.hero__img_mobil{
+    display: none;
+}
+
+.close_menu{
+    display: none;
+}
+/************************/
+
+@media only screen and (max-width: 996px){
+    body{
+        height: auto;
+    }
+
+    .sidebar{
+        display: none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(to right, rgba(0,0,0,60%) 50%, white 50%);
+        font-size: 16px;
+    }
+
+    .close_menu{
+        display: block;
+        position: relative;
+        left: 90%;
+        margin-top: 1.5rem;
+    }
+
+    .sidebar_elements:nth-child(2){
+        list-style: none;
+    }
+
+    .sidebar_features__item, .sidebar_company__item, .sidebar_careers, .sidebar_about{
+        text-decoration: none;
+        color: var(--MediumGray);
+    }
+
+    .sidebar_elements{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        position: relative;
+        left: 50%;
+        width: 40%;
+        padding-left: 25px;
+        margin-right: 0px ;
+    }
+    .sidebar_features_content, .sidebar_company_content{
+        display: none;
+    }
+
+    .sidebar_features_content, .sidebar_company_content{
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .sidebar_company__caret, .sidebar_features__caret{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .sidebar_login{
+        position: relative;
+    }
+
+    .sidebar_login_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding-left: 0px;
+    }
+
+    .sidebar_login_content li a{
+        color: var(--MediumGray);
+        text-decoration: none;
+    }
+
+    .sidebar_login_content li button{
+        color: var(--MediumGray);
+        background: transparent;
+        width: 180px;
+        height: 45px;
+        border-radius: 15px;
+    }
+
+    .sidebar_login_content:nth-child(1){
+        list-style: none;
+    }
+
+    .container{
+        display: block;
+        
+    }
+
+    .nav{
+        padding: 21px 40px;
+    }
+
+    .remote{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .hero{
+        display: none;
+    }
+
+    .hero__img_mobil{
+        display: block;
+        width: 100%;
+        
+    }
+
+    .remote__work{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .remote__work h1{
+        font-size: 35px;
+        margin-top: 4rem;
+    }
+
+    .button{
+        margin-top: 35px;
+    }
+
+    .remote__company{
+        margin-top: 80px;
+        gap: 2rem;
+    }
+
+    .primera_img, .segunda_img, .tercera_img, .cuarta_img{
+        width: 4.2rem;
+    }
+
+    .remote__work p{
+        font-size: 21px;
+        text-align: center;
+        max-width: none;
+        margin-left: 16px;
+        margin-right: 16px;;
+    }
+
+    .prueba{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .con_span{
+        display: none;
+    }
+
+    .sin_span{
+        display: block;
+    }
+
+    .navbar__elements, .login{
+        display: none !important;
+    }
+
+    .navbar{
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .burguer{
+        display: block;
+    }
+}
